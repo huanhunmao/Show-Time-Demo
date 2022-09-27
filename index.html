@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const getTime = () => {
+        var now = new Date()
+        var year = now.getFullYear()
+        var month = now.getMonth() + 1
+        var date = now.getDate()
+        var hour = now.getHours()
+        var minute = now.getMinutes()
+        var second = now.getSeconds()
+        document.getElementById('y').innerHTML = year
+        document.getElementById('mo').innerHTML = month
+        document.getElementById('d').innerHTML = date
+        document.getElementById('h').innerHTML = hour
+        document.getElementById('m').innerHTML = minute
+        document.getElementById('s').innerHTML = second
+        setTimeout(getTime, 1000)
+      }
+    </script>
+  </head>
+
+  <body onload="getTime()">
+    <div class="time">
+      <div class="about">
+        <div class="item">
+          <a target="_blank" href="https://juejin.cn/user/1741228277763278">
+            <img style="height: 40px" src="./img/juejin.svg" alt="" />
+          </a>
+        </div>
+        <div class="item">
+          <a
+            target="_blank"
+            href="https://space.bilibili.com/358561697?spm_id_from=333.1007.0.0"
+          >
+            <img style="height: 35px" src="./img/bili.svg" alt="" />
+          </a>
+        </div>
+        <div class="item">
+          <a target="_blank" href="https://www.zhihu.com/people/xilan-70">
+            <img src="./img/zhihu.svg" alt="" />
+          </a>
+        </div>
+        <div class="item">
+          <a target="_blank" href="https://github.com/huanhunmao">
+            <img style="height: 20px" src="./img/github.svg" alt="" />
+          </a>
+        </div>
+        <div class="item photo" id="hug-sun">
+          <img src="./img/WechatIMG1436.jpeg" alt="" />
+        </div>
+      </div>
+
+      <div class="content">
+        <span id="y"></span><span>-</span><span id="mo"></span><span>-</span>
+        <span id="d"></span>
+        <br />
+        <span id="h"></span><span>:</span> <span id="m"></span><span>:</span>
+        <span id="s"></span>
+      </div>
+    </div>
+  </body>
+  <style>
+    .about {
+      width: 800px;
+      margin: 0 auto;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .about .item {
+      color: white;
+      flex: 1;
+      text-align: center;
+    }
+    .about .photo img {
+      width: 200px;
+      height: 200px;
+    }
+    .time {
+      position: relative;
+      text-align: center;
+      background-color: black;
+      height: 100vh;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+    .time span {
+      font-size: 21vh;
+      line-height: 21vh;
+      font-weight: bold;
+      color: #e2ecfd;
+    }
+  </style>
+</html>
